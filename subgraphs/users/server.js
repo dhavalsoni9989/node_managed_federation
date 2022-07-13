@@ -11,8 +11,9 @@ const typeDefs = gql(schemaGql);
 
 const resolvers = {
     Query: {
-      me() {
-        return users[0];
+      getUser(_, args) {
+        const userid = parseInt(args.id) - 1;
+        return users[userid];
       }
     },
     User: {
@@ -36,21 +37,21 @@ const resolvers = {
   });
   
   server.listen({ port: 4001 }).then(({ url }) => {
-    console.log(`ðŸš€ Server ready at ${url}`);
+    console.log(`🚀 Server ready at ${url}`);
   });
   
   const users = [
     {
       id: "1",
-      name: "Ada Lovelace",
-      birthDate: "1815-12-10",
-      username: "@ada"
+      name: "Steven Tyler",
+      birthDate: "1948-01-10",
+      username: "@steven"
     },
     {
       id: "2",
-      name: "Alan Turing",
-      birthDate: "1912-06-23",
-      username: "@complete"
+      name: "Vin Diesel",
+      birthDate: "1984-05-13",
+      username: "@vind"
     }
   ];
   

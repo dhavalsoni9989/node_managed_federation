@@ -43,36 +43,32 @@ const server = new ApolloServer({
 });
 
 server.listen({ port: 4002 }).then(({ url }) => {
-  console.log(`ðŸš€ Server ready at ${url}`);
+  console.log(`🚀 Server ready at ${url}`);
 });
 
 const usernames = [
-  { id: "1", username: "@ada" },
-  { id: "2", username: "@complete" }
+  { id: "1", username: "@steven" },
+  { id: "2", username: "@vind" }
 ];
 const reviews = [
   {
     id: "1",
     authorID: "1",
-    product: { upc: "1" },
-    body: "Love it!"
+    body: "Too Good!"
   },
   {
     id: "2",
     authorID: "1",
-    product: { upc: "2" },
-    body: "Too expensive."
+    body: "Too Cheaper."
   },
   {
     id: "3",
     authorID: "2",
-    product: { upc: "3" },
     body: "Could be better."
   },
   {
     id: "4",
     authorID: "2",
-    product: { upc: "1" },
-    body: "Prefer something else."
+    body: "Not Good."
   }
 ];

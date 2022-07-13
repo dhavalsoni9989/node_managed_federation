@@ -1,5 +1,5 @@
 extend type Query {
-  me: User
+  getUser(id:ID): User
 }
 
 type User @key(fields: "id") {

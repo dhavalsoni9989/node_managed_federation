@@ -29,6 +29,6 @@ const gateway = new ApolloGateway({
   });
 
   server.listen({ port: 4005 }).then(({ url }) => {
-    console.log(`ðŸš€ Server ready at ${url}`);
+    console.log(`🚀 Server ready at ${url}`);
   });
 })();
