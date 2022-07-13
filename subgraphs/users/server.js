@@ -12,8 +12,8 @@ const typeDefs = gql(schemaGql);
 const resolvers = {
     Query: {
       getUser(_, args) {
-        const userid = parseInt(args.id) - 1;
-        return users[userid];
+        const userId = parseInt(args.id) - 1;
+        return users[userId];
       }
     },
     User: {
